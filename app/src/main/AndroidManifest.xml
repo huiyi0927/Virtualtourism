@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VirtualTourism"
+        tools:replace="android:icon"
+        tools:targetApi="31">
+        <!--   todo 2022.11.24 sdk接进来之后android：icon会报错 才写的tools:replace 后面换图标就可以去掉这句话了     -->
+
         <meta-data android:name="com.baidu.lbsapi.API_KEY"
             android:value="wRy0BnGKGrqKSxpcI5pdruCuBDLEnRTr">
         </meta-data>
 
-        tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true">
