@@ -14,6 +14,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a"
+        }
     }
     //加的签名配置 但貌似没生效
     signingConfigs {
@@ -45,21 +48,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-//    sourceSets {
-//        main{
-//            jniLibs.srcDirs=['libs']
-//        }
-//    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-//    repositories {
-//        flatDir {
-//            dirs 'libs'
-//        }
-//    }
+
+
 }
+//repositories {
+//    flatDir {
+//        dirs'libs'
+//    }
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', includes: ['*.aar'])
@@ -69,10 +70,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-}
-
-
-dependencies {
-    implementation(name:'BaiduLBS_aar_android_V1.10.7_335550528', ext:'aar')
-    implementation(name:'BaiduMapSDK_BikeNavi_res', ext:'aar')
+    //这里其实就是引入了jar包
+//    implementation 'com.amap.api:3dmap:latest.integration'
+//    implementation 'com.amap.api:map2d:latest.integration'
+//    implementation 'com.amap.api:navi-3dmap:latest.integration'
+//    implementation 'com.amap.api:search:latest.integration'
+//    implementation 'com.amap.api:location:latest.integration'
+//    implementation(name:'AMap3DMap_9.5.0_AMapNavi_9.5.0_AMapSearch_9.4.5_AMapLocation_6.2.0_20221026',ext:'aar')
 }
