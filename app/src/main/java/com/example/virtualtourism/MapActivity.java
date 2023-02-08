@@ -25,8 +25,8 @@ import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
 
 
-public class MainActivity extends Activity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class MapActivity extends Activity {
+    private static final String TAG = MapActivity.class.getSimpleName();
 
 
     private Marker locationMarker;
@@ -76,9 +76,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         //对象的实例创建，反射，Class就可以创建一个实例
         mButton = findViewById(R.id.bt_location);
-
-
-//        RelativeLayout relativeLayout = new RelativeLayout();
 
 
         //先进行权限申请情况判断，没有权限申请权限
