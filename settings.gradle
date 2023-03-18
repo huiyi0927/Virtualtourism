@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Virtual tourism"
 include ':app'
+include ':campusnavigator'

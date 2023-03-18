@@ -1,0 +1,47 @@
+package com.lhy.campusnavigator.model;
+
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.lhy.campusnavigator.window.Window;
+
+/**
+ * @Description
+ * @Author John
+ * @email
+ * @Date 2022/9/26 17:34
+ * @Version 1
+ */
+public class Mode {
+    private M mode;
+
+    public Mode() {
+        mode = M.DEFAULT;
+        log();
+    }
+
+    public void changeTo(M mode) {
+        if (this.mode != mode) {
+            Window.transition(this.mode.getWindow(), mode.getWindow());
+            this.mode = mode;
+        }
+        log();
+    }
+
+    public M getState() {
+        return mode;
+    }
+
+    public void log() {
+        Log.i("CamNav-Mode", "Current Mode=" + mode);
+    }
+
+    public boolean is(@NonNull M m) {
+        return mode == m;
+    }
+
+    public boolean isRouteOpen() {
+        return mode == M.S_ROUTE || mode == M.M_ROUTE;
+    }
+}

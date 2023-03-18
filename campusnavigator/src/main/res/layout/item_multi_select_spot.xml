@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        tools:ignore="UseCompoundDrawables">
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/spot_location"
+            tools:ignore="ContentDescription" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/multi_select_spot_name"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:maxEms="4"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="5dp"/>
+</LinearLayout>

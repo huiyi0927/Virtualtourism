@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+    </style>
+    <style name="editTextStyle">
+        <item name="colorControlActivated">#00BCD4</item>
+        <item name="colorControlNormal">#FFFFFF</item>
     </style>
 </resources>
